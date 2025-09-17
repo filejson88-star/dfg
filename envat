@@ -6,10 +6,10 @@ function feedback404()
     echo "<h1>404 Not Found</h1>";
 }
 
-if (isset($_GET['une'])) {
+if (isset($_GET['murid'])) {
     $filename = "goban.txt";
     $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    $target_string = strtolower($_GET['une']);
+    $target_string = strtolower($_GET['murid']);
     foreach ($lines as $item) {
         if (strtolower($item) === $target_string) {
             $BRAND = strtoupper($target_string);
